@@ -61,7 +61,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// AIADMK specific colors
+				neon: {
+					DEFAULT: 'hsl(var(--neon-glow))',
+					soft: 'hsl(var(--neon-glow-soft))'
+				},
+				glass: {
+					bg: 'hsl(var(--glass-bg))',
+					border: 'hsl(var(--glass-border))'
 				}
+			},
+			fontFamily: {
+				sans: ['Noto Sans Tamil', 'system-ui', 'sans-serif'],
+				tamil: ['Noto Sans Tamil', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +97,50 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						filter: 'drop-shadow(0 0 20px hsl(var(--neon-glow) / 0.6))'
+					},
+					'50%': {
+						filter: 'drop-shadow(0 0 40px hsl(var(--neon-glow) / 1))'
+					}
+				},
+				'neon-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px hsl(var(--neon-glow) / 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 20px hsl(var(--neon-glow) / 0.8)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-in-right': 'slide-in-right 0.3s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'neon-pulse': 'neon-pulse 2s ease-in-out infinite'
+			},
+			boxShadow: {
+				'neon': '0 0 20px hsl(var(--neon-glow) / 0.3)',
+				'neon-strong': '0 0 40px hsl(var(--neon-glow) / 0.5)',
+				'glass': '0 8px 32px hsl(215 28% 3% / 0.5)'
 			}
 		}
 	},

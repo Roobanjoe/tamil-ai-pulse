@@ -1,96 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* AIADMK ChatBot Dark Neon-Green Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* AIADMK Dark Theme - Deep space colors with neon green accents */
+    --background: 215 28% 7%;
+    --foreground: 84 100% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 215 28% 9%;
+    --card-foreground: 84 100% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 215 28% 9%;
+    --popover-foreground: 84 100% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 84 100% 50%;
+    --primary-foreground: 215 28% 7%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 215 28% 13%;
+    --secondary-foreground: 84 100% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 28% 11%;
+    --muted-foreground: 84 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 84 100% 50%;
+    --accent-foreground: 215 28% 7%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 28% 15%;
+    --input: 215 28% 11%;
+    --ring: 84 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Sidebar colors for AIADMK theme */
+    --sidebar-background: 215 28% 5%;
+    --sidebar-foreground: 84 100% 90%;
+    --sidebar-primary: 84 100% 50%;
+    --sidebar-primary-foreground: 215 28% 7%;
+    --sidebar-accent: 215 28% 9%;
+    --sidebar-accent-foreground: 84 100% 90%;
+    --sidebar-border: 215 28% 15%;
+    --sidebar-ring: 84 100% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* AIADMK specific design tokens */
+    --neon-glow: 84 100% 50%;
+    --neon-glow-soft: 84 100% 35%;
+    --glass-bg: 215 28% 8%;
+    --glass-border: 215 28% 20%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(84 100% 50%), hsl(84 80% 40%));
+    --gradient-glass: linear-gradient(135deg, hsl(215 28% 8% / 0.8), hsl(215 28% 12% / 0.6));
+    --gradient-hero: linear-gradient(180deg, hsl(215 28% 5%), hsl(215 28% 9%));
+    
+    /* Shadows with neon glow */
+    --shadow-neon: 0 0 20px hsl(var(--neon-glow) / 0.3);
+    --shadow-neon-strong: 0 0 40px hsl(var(--neon-glow) / 0.5);
+    --shadow-glass: 0 8px 32px hsl(215 28% 3% / 0.5);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
+    --background: 215 28% 7%;
+    --foreground: 84 100% 90%;
+    --card: 215 28% 9%;
+    --card-foreground: 84 100% 90%;
+    --popover: 215 28% 9%;
+    --popover-foreground: 84 100% 90%;
+    --primary: 84 100% 50%;
+    --primary-foreground: 215 28% 7%;
+    --secondary: 215 28% 13%;
+    --secondary-foreground: 84 100% 90%;
+    --muted: 215 28% 11%;
+    --muted-foreground: 84 20% 65%;
+    --accent: 84 100% 50%;
+    --accent-foreground: 215 28% 7%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 215 28% 15%;
+    --input: 215 28% 11%;
+    --ring: 84 100% 50%;
   }
 }
 
@@ -100,6 +98,149 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom cursor effects */
+@layer utilities {
+  .cursor-neon {
+    cursor: none;
+  }
+
+  .cursor-neon::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: hsl(var(--neon-glow));
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px hsl(var(--neon-glow));
+    transition: transform 0.1s ease-out, box-shadow 0.15s ease-out;
+  }
+
+  .cursor-neon::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid hsl(var(--neon-glow) / 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out, opacity 0.15s ease-out;
+  }
+
+  /* Hover effects for interactive elements */
+  .hover-glow:hover {
+    box-shadow: var(--shadow-neon);
+    transform: translateY(-1px);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--glass-border) / 0.3);
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Neon text glow */
+  .text-neon {
+    color: hsl(var(--neon-glow));
+    text-shadow: 0 0 10px hsl(var(--neon-glow) / 0.5);
+  }
+
+  /* AIADMK logo glow animation */
+  .logo-glow {
+    filter: drop-shadow(0 0 20px hsl(var(--neon-glow) / 0.6));
+    transition: filter 0.3s ease;
+  }
+
+  .logo-glow:hover {
+    filter: drop-shadow(0 0 30px hsl(var(--neon-glow) / 0.8));
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Background pattern */
+  .bg-pattern {
+    background-image: 
+      radial-gradient(circle at 2px 2px, hsl(var(--neon-glow) / 0.15) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  /* Tamil text support */
+  .tamil-text {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-feature-settings: "liga" 1, "calt" 1;
+  }
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px hsl(var(--neon-glow) / 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px hsl(var(--neon-glow) / 1));
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px hsl(var(--neon-glow) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(var(--neon-glow) / 0.8);
+  }
+}
+
+/* Component specific styles */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
 }
